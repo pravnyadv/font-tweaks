@@ -13,12 +13,15 @@ function setCss(e) {
 }
 
 
+function el(sel) {
+	return document.querySelectorAll(sel);
+}
+
 window.onload = function() {
 
-	let all_para = document.querySelectorAll("body p");
-	let para = document.querySelectorAll(".overview p");
-	let li = document.querySelectorAll(".overview li");
-
+	let all_para = el("body p");
+	let para = el(".overview p");
+	let li = el(".overview li");
 	
 	all_para.forEach(function(e) {
 		setCss(e);
